@@ -1,1 +1,0 @@
-Hello this is a Diabetic Retinopathy Detection website
