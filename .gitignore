@@ -1,2 +1,4 @@
 model
 drenv
+static/detections/*
+static/uploads/*

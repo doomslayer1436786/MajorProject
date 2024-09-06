@@ -6,10 +6,10 @@ import os
 def copy_and_delete_folder():
     
     src_folder = r'.//runs//classify//predict'
-    dest_folder = r'.//detections'
+    dest_folder = r'.//static//detections'
 
     if not os.path.exists(src_folder):
-        print(f"Source folder '{src_folder}' does not exist.")
+        #print(f"Source folder '{src_folder}' does not exist.")
         return
 
     if not os.path.exists(dest_folder):
@@ -25,13 +25,19 @@ def copy_and_delete_folder():
                 shutil.copytree(src_item, dest_item)
             else:
                 shutil.copy2(src_item, dest_item)
+            
 
        # print(f"All files from '{src_folder}' copied to '{dest_folder}'.")
 
+
         shutil.rmtree("runs")
+        return str(dest_item)
         #print(f"Source folder '{src_folder}' deleted.")
 
     except Exception as e:
         print(f"Error occurred: {e}")
+    
+    
 
 
+copy_and_delete_folder()
